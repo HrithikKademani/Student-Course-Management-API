@@ -1,0 +1,107 @@
+{
+  "info": {
+    "name": "Student Course API",
+    "_postman_id": "b3216cf3-11aa-4ef1-8ed1-d0174be5e7aa",
+    "description": "Collection to test the Student Course Management API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Student",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Hrithik\",\n  \"email\": \"hrithik@example.com\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8000/students/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["students", ""]
+        }
+      }
+    },
+    {
+      "name": "Create Course",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Python Basics\",\n  \"description\": \"Learn Python fundamentals\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8000/courses/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["courses", ""]
+        }
+      }
+    },
+    {
+      "name": "Enroll Student",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"student_id\": 1,\n  \"course_id\": 1\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8000/enroll/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["enroll", ""]
+        }
+      }
+    },
+    {
+      "name": "Get Student Details",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/students/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["students", "1"]
+        }
+      }
+    },
+    {
+      "name": "Get Course Details",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/courses/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["courses", "1"]
+        }
+      }
+    }
+  ]
+}
